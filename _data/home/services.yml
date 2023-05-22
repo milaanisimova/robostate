@@ -1,0 +1,21 @@
+title: Our Activities
+classNames: flex row wrap
+columns:
+  - title: Online Coding Lessons
+    body: No matter where you are, you can learn to code with us. Our online coding lessons are designed to provide children with the opportunity to learn from the comfort of their homes. Our interactive online lessons are led by experienced instructors who are passionate about technology and education, ensuring your child receives an engaging and effective learning experience.
+
+    button:
+      link: 
+      text: Read more
+
+  - title: Join the Club
+    body: For those who wish for a more hands-on experience, join our in-person Robotics Club! Here, your child will learn, experiment, and collaborate with like-minded peers. They'll learn to build and program robots and develop engineering, critical thinking, and problem-solving skills. The club is a great way for your child to make new friends who share their interest in robotics and coding.
+    button:
+      link: 
+      text: Read more
+
+  - title: Strive for Glory
+    body: Our students not only learn but also have the opportunity to showcase their skills. We actively participate in various robotics and coding competitions, where our students demonstrate their creativity, collaboration, and coding skills. These experiences inspire our students to push their boundaries and excel in the fascinating world of technology.
+    button:
+      link: 
+      text: Read more

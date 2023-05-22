@@ -1,0 +1,28 @@
+title: We Offer
+bg: "#fcfbe9"
+
+classNames: flex row wrap
+columns:
+  - title: Expert Teachers
+    body: Our instructors are experts in their field, passionate about imparting their knowledge and experiences to our students.
+    button:
+      link: #
+      text: Read more
+
+  - title: Hands-on Learning
+    body: Our curriculum emphasizes experiential learning, providing our students with practical skills they can apply in real-world situations.
+    button:
+      link: #
+      text: Read more
+
+  - title: Inclusive Community
+    body: We foster an inclusive, supportive community where every student is encouraged to explore, experiment, and excel.
+    button:
+      link: #
+      text: Read more
+
+  - title: Future Skills
+    body: We're not just teaching kids to code, we're preparing them for the future by equipping them with vital skills such as problem-solving, critical thinking, teamwork, and creativity.
+    button:
+      link: #
+      text: Read more

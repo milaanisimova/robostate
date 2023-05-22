@@ -1,0 +1,24 @@
+
+title: Stay In Touch
+body: Send us your enquiries and feedback. We would love to hear from you.
+fields:
+  - id: name
+    title: Name
+    required: true
+
+  - id: email
+    title: Email
+    type: email
+    required: true
+
+  - id: phone
+    title: Phone
+    type: phone
+
+  - id: message
+    title: Message
+    required: true
+
+submit:
+  title: Send
+  url: https://

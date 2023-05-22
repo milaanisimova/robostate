@@ -1,0 +1,80 @@
+---
+layout: default
+---
+
+
+
+{%- for section in site.data.home.sections -%}
+{%- assign data = site.data.home[section] -%}
+  {% case section  %}
+
+  {% when "services" %}
+  <section {%if data.bg != blank %}style="background-color: {{data.bg}}" {% endif %}>
+    <div class="max-width flex row wrap">
+    <div class="block w-100 text-center">
+    <h2>{{ data.title }}</h2>
+    </div>
+    {%- for column in data.columns -%}
+    <div class="flex column flex-1-1-20rem padding-1rem margin-05rem text-center">
+      <h3>{{column.title}}</h3>
+      <p>{{column.body}}</p>
+      {% if column.button.link  %}
+      <a href="{{column.button.link}}" class="link-button">{{column.button.text}}</a>
+      {% endif %}
+    </div>
+    {%- endfor -%}
+  </div>
+  </section>
+
+
+  {% when "why" %}
+  <section {%if data.bg != blank %}style="background-color: {{data.bg}}" {% endif %}>
+    <div class="max-width flex row wrap justify-content-center align-items-start ">
+    <div class="block w-100 text-center">
+    <h2>{{ data.title }}</h2>
+    </div>
+    {%- for column in data.columns -%}
+    <div class="flex column flex-0-1-15rem padding-1rem margin-05rem text-center">
+      <h3>{{column.title}}</h3>
+      <p>{{column.body}}</p>
+      {% if column.button.link  %}
+      <a href="{{column.button.link}}" class="link-button">{{column.button.text}}</a>
+      {% endif %}
+    </div>
+    {%- endfor -%}
+  </div>
+  </section>
+
+  {% when "about" %}
+  <section {%if data.bg != blank %}style="background-color: {{data.bg}}" {% endif %}>
+    <div class="max-width flex row wrap">
+    <div class="flex column flex-2-1-15rem">
+      {% assign image = data.media.image   %}
+      <img src="{{ image  | prepend: '/assets/' | relative_url }}" alt="a robot laying a brick"
+      class="w-100"
+      >
+    </div>
+    <div class="flex column flex-1-1-15rem padding-1rem margin-05rem text-center">
+        <h2 class="flex column ">{{ data.title }}</h2>
+        <p>{{data.body}}</p>
+
+        {% if data.button.link  %}
+          <a href="{{ data.button.link}}" class="link-button">{{data.button.text}}</a>
+        {% endif %}
+    </div>
+    </div>
+  </section>
+
+  {% when "contactus" %}
+  <section class="flex column padding-1rem margin-05rem">
+        <h2 class="flex column text-center">{{ data.title }}</h2>
+        <a href="{{ data.button.link}}" class="link-button">{{data.button.text}}</a>
+        
+  </section>
+
+  {% endcase %}
+{%- endfor -%}
+
+<div class="home">
+  {{ content }}
+</div>

@@ -1,0 +1,159 @@
+body{
+  --white: #fff;
+  --black: #000;
+  --buttonbg: purple;
+  --headersfg: orange;
+  margin: 0;
+  padding: 0;
+}
+.none{
+  display: none;
+}
+.block{
+  display: block;
+}
+.max-width{
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.w-100{
+  width: 100%;
+}
+.w-50{
+  width: 50%;
+}
+.text-center { 
+  text-align: center;
+}
+.shadow{
+  box-shadow: 0 0 24px 0 rgba(0,0,0,.15);
+}
+.fixed{
+  position: fixed;
+  top:0;
+  z-index: 1;
+}
+.relative{
+  position: relative;
+}
+.mt-0{
+  margin-top: 0;
+}
+.mb-0{
+  margin-bottom:0
+}
+.flex{
+  display: flex;
+}
+.column{
+  flex-direction: column;
+}
+.row{ 
+  flex-direction: row;
+}
+.wrap{
+  flex-wrap: wrap;
+}
+
+.justify-content-center{
+  justify-content: center;
+}
+.align-items-center{
+  align-items: center;
+}
+.align-items-start{
+  align-items: start;
+}
+
+.flex-1-1{ 
+  flex: 1 1 auto;
+}
+.flex-1-1-15rem{
+  flex: 1 1 15rem;
+}
+
+.flex-2-1-15rem{
+  flex: 2 1 15rem;
+}
+.flex-0-1-15rem{
+  flex: 0 1 15rem;
+}
+.flex-1-1-20rem{
+  flex: 1 1 20rem;
+}
+.no-underline{
+  text-decoration: none;
+}
+.font-size-3rem {
+  font-size: 3rem;
+}
+
+h1,h2,h3,.font-gruppo{
+// font-family: 'Gruppo', cursive;
+font-family: 'Bruno Ace SC', cursive;
+}
+
+.padding-0-2rem{
+  padding: 0 2rem;
+}
+.padding-i-1rem{ 
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.padding-2rem{
+  padding: 2rem;
+}
+.list-none{
+  list-style: none;
+}
+.padding-05rem-0{
+  padding: 0.5rem 0;
+}
+.padding-1rem{
+  padding: 1rem;
+}
+.margin-05rem{
+  margin: 0.5rem;
+}
+
+.monospace{
+  font-family: monospace;
+}
+.line-height-1{
+  line-height: 1;
+}
+
+#nav-trigger:checked+div>nav>label svg
+ {
+  transform: rotate(90deg);
+}
+#nav-trigger:checked+div>.modal-menu {
+  display: block;
+}
+
+.bg2 {
+  background-color: var(--headersfg);
+}
+
+.cta-rounded {
+  display: inline-block;
+  border: #5e5e5e 3px solid;
+  background: #b30c1d;
+  text-decoration: none;
+  padding: 0.3rem 1rem;
+  color: white;
+}
+
+.text-center {
+  text-align: center;
+}
+.link-button {
+  padding: 0.5rem 1rem;
+  background-color: var(--buttonbg);
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-self: center;
+}
