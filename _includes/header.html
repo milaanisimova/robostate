@@ -7,7 +7,7 @@
     {%- assign page_paths = site.header_pages | default: default_paths -%}
 
     {%- if page_paths -%}
-      <nav class="site-nav flex row justify-content-center align-items-center flex-1-1">
+      <nav class="site-nav flex row jcc aic flex-1-1 my-04">
         <label for="nav-trigger">
           <span class="menu-icon">
             <svg viewBox="0 0 18 15" width="18px" height="15px">
@@ -17,7 +17,7 @@
         </label>
 
         <div class="logo padding-i-1rem flex-1-1 monospace line-height-1">
-          <a class="site-title no-underline font-size-3rem font-gruppo" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+          <a class="site-title no-underline font-size-2rem font-gruppo" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
         </div>
 
         <div class="cta">
@@ -25,19 +25,7 @@
         </span>
       </nav>
 
-
-
-      <div class="modal-menu none column padding-2rem" >
-        <div class="menu-title"><span>Pages</span></div>
-        <ul class="top-menu list-none padding-05rem-0">
-          {%- for path in page_paths -%}
-          {%- assign my_page = site.pages | where: "path", path | first -%}
-          {%- if my_page.title -%}
-          <li class="top_menu__item"></li><a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></li>
-          {%- endif -%}
-          {%- endfor -%}
-      </div>
-
+      {%- include menu.html -%}
 
     {%- endif -%}
   </div>

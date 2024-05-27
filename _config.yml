@@ -53,3 +53,26 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+defaults:
+  -
+    scope:
+      path: "classes/" # an empty string here means all files in the project
+      type: "pages"
+    values:
+      layout: "page"
+  # -
+  #   scope:
+  #     path: "projects"
+  #     type: "pages" # previously `page` in Jekyll 2.2.
+  #   values:
+  #     layout: "project" # overrides previous default layout
+  #     author: "Mr. Hyde"
+
+# collections:
+#   classes:
+#     sort_by: order
+
+collections:
+  classes:
+    output: true
+    permalink: /:collection/:name

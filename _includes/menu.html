@@ -1,0 +1,15 @@
+<div class="modal-menu none column background:#fcfbe9">
+  <ul class="top-menu list-none display:flex flex-direction:column md:{flex-direction:row;flex-wrap:wrap;justify-content:space-evenly}">
+    {%- assign sorted_filtered_pages = site.pages | where_exp: "item", "item.order != empty" | sort: 'order'  -%}
+
+    {%- for  my_page in sorted_filtered_pages -%}
+    {%- if my_page.title -%}
+    <li class="top_menu__item">
+      <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title |
+        escape }}
+      </a>
+    </li>
+    {%- endif -%}
+    {%- endfor -%}
+  </ul>
+</div>

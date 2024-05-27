@@ -57,14 +57,17 @@ body{
   flex-wrap: wrap;
 }
 
-.justify-content-center{
+.jcc{
   justify-content: center;
 }
-.align-items-center{
+.aic{
   align-items: center;
 }
-.align-items-start{
+.ais{
   align-items: start;
+}
+.ai-stretch{
+  align-items: stretch;
 }
 
 .flex-1-1{ 
@@ -86,13 +89,12 @@ body{
 .no-underline{
   text-decoration: none;
 }
-.font-size-3rem {
-  font-size: 3rem;
+.font-size-2rem {
+  font-size: 2rem;
 }
 
 h1,h2,h3,.font-gruppo{
-// font-family: 'Gruppo', cursive;
-font-family: 'Bruno Ace SC', cursive;
+font-family: 'Bruno Ace SC';
 }
 
 .padding-0-2rem{
@@ -111,11 +113,16 @@ font-family: 'Bruno Ace SC', cursive;
 .padding-05rem-0{
   padding: 0.5rem 0;
 }
-.padding-1rem{
+.p-1{
   padding: 1rem;
 }
-.margin-05rem{
+.m-05{
   margin: 0.5rem;
+}
+
+.my-04{
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
 }
 
 .monospace{
@@ -123,6 +130,11 @@ font-family: 'Bruno Ace SC', cursive;
 }
 .line-height-1{
   line-height: 1;
+}
+
+main>ul{
+  margin-left: 1rem;
+  padding: 0;
 }
 
 #nav-trigger:checked+div>nav>label svg
@@ -135,6 +147,11 @@ font-family: 'Bruno Ace SC', cursive;
 
 .bg2 {
   background-color: var(--headersfg);
+}
+
+.bgw {
+  background-color: var(--white);
+
 }
 
 .cta-rounded {
