@@ -1,0 +1,30 @@
+title: Contact us
+bg: "#f7f5fa"
+
+classNames: flex column wrap
+email: 3542170468e9b973db00585506f18b9a
+
+
+fields:
+  - id: name
+    title: Name
+    pattern: "[A-Za-zÀ-ÖØ-öø-ÿ]{1}[A-Za-zÀ-ÖØ-öø-ÿ \\-']{5,80}"
+    pattern0: "[A-Za-zÀ-ÖØ-öø-ÿ'][A-Za-zÀ-ÖØ-öø-ÿ- ']{5,80}"
+    error: Name should only contain letters, spaces, hyphens, and apostrophes.
+  - id: email
+    title: Email
+    type: email
+    pattern: "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"
+    error: Email should be a valid email address.
+  - id: phone
+    title: Phone
+    type: phone
+    pattern: ^(\+61|0)[2-478]{1}[0-9]{8}$
+    pattern0: ^(\+61|0)[2-478](\\s?\\d){8}$
+
+    error: Phone number should be a valid Australian phone number.
+  - id: message
+    title: Message
+    type: textarea
+    pattern: ".{5,}"
+    error: Message is required.

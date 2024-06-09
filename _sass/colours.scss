@@ -174,3 +174,66 @@ main>ul{
   display: flex;
   align-self: center;
 }
+
+
+
+
+form input:invalid.dirty,
+form textarea:invalid.dirty {
+    border-color: red;
+}
+
+form input:invalid.dirty ~ .error-message,
+form textarea:invalid.dirty ~ .error-message {
+    display: block;
+}
+
+form input:focus:invalid,
+form textarea:focus:invalid {
+    border-color: red;
+}
+
+form .error-message {
+    display: none;
+    color: red;
+    font-size: 12px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.form-group {  
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width:800px){
+.form-group {  display: grid;
+  grid-template-columns: 6em 1fr;
+  grid-template-rows: 1fr auto;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 200px;
+  gap: 1em 1em;
+  grid-auto-flow: row;
+  justify-content: center;
+  align-items: baseline;
+  grid-template-areas:
+    "label input"
+    ". error-message";
+  max-width: 30rem;
+  margin: 0 auto;
+}
+
+.error-message { grid-area: error-message; }
+.label { grid-area: label; }
+.input { grid-area: input; }
+}

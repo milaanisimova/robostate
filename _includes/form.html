@@ -1,0 +1,49 @@
+{%- assign contact = site.data.home.contactform -%}
+
+<section {%if contact.bg !=blank %}style="background-color: {{contact.bg}}" {% endif %}>
+  <div class="{{contact.classNames}}">
+    <h2 class="flex column text-center">{{ contact.title }}</h2>
+    <form action="https://formsubmit.co/{{contact.email}}" method="POST" class="column flex">
+      {%- for field in contact.fields -%}
+      <div class="minw800px:width:100% form-group">
+        <label class="label" for="{{field.id}}">{{field.title}}</label>
+        {% if field.type == blank %}
+        <input type="text" class="input" id="{{field.id}}" name="{{field.id}}" required>
+        {% endif %}
+        {% if field.type == "textarea" %}
+        <textarea type="text" class="input" id="{{field.id}}" name="{{field.id}}" required rows="4" {% if field.pattern
+          !=blank %}pattern="{{field.pattern}}" {% endif %} placeholder="{{field.title}}"></textarea>
+        {% else %}
+        <input class="input" {% if field.type !=blank %}type="{{field.type}}" {% endif %} id="{{field.id}}"
+          name="{{field.id}}" required {% if field.pattern !=blank %}pattern="{{field.pattern}}" {% endif %}
+          placeholder="{{field.title}}">
+        {% endif %}
+        <div class="error-message"> {{field.error}} </div>
+      </div>
+      {%- endfor -%}
+      <div class="minw800px:width:100% padding-bottom:2rem form-group">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+
+
+
+<script>
+  (() => {
+    const inputs = document.querySelectorAll('form input, form textarea');
+
+    for (let input of inputs) {
+      console.log(input)
+      input.addEventListener('input', function () {
+        if (input.value.length > 0) {
+          input.classList.add('dirty');
+        }
+      });
+    }
+  })()
+  // , { once: true }
+
+</script>
