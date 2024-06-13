@@ -18,3 +18,7 @@ In today's rapidly evolving world, the significance of technology cannot be over
 - Introduce accessible robotics competitions suitable for children as young as eight.
 - Connect with a global community, fostering collaboration and innovation.
 - Develop critical thinking, teamwork, and problem-solving abilities crucial for their future.
+
+# Links:
+- [Junior classes](junior.html)
+- [Advanced classes](advanced.html)

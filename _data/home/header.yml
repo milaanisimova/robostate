@@ -1,4 +1,10 @@
 bg: 
-button:
-  link: https://calendly.com/robostate/robotics-trial
-  text: Book Free Trial
+buttons:
+  - text: Parents
+    link: /classes/
+
+  - text: Teachers
+    link: /classes/teachers.html
+
+  - text: Book Trial
+    link: https://calendly.com/robostate/robotics-trial

@@ -18,6 +18,10 @@
 
         {% endfor %}
 
+        {%if page.form!=blank %}
+        {% include form.html %}
+        {% endif %}
+
 
     </main>
 

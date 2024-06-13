@@ -17,11 +17,13 @@
         </label>
 
         <div class="logo padding-i-1rem flex-1-1 monospace line-height-1">
-          <a class="site-title no-underline font-size-2rem font-gruppo" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+          <a class="site-title no-underline font-big font-gruppo" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
         </div>
 
         <div class="cta">
-          <a class="cta-rounded font-gruppo" href="{{headerdata.button.link}}">{{headerdata.button.text}}</a>
+        {% for btn in headerdata.buttons %}
+          <a class="cta-rounded font-gruppo" href="{{btn.link}}">{{btn.text}}</a>
+        {% endfor %}
         </span>
       </nav>
 

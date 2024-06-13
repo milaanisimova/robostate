@@ -22,15 +22,10 @@
 .padding-bottom\:2rem{
 	padding-bottom: 2rem
 }
-.\3800px\:width\:100\%:800px{
-	width: 100%
-}
-.width\:100\%{
-	width: 100%
-}
 
 @media (min-width: 768px) {
-.md\:\{flex-direction\:row\;flex-wrap\:wrap\;justify-content\:space-evenly\}{
+.md\:\{flex-direction\:row\;flex-wrap\:wrap\;justify-content\:space-evenly\},
+.md\:flex-direction\:row{
 	flex-direction: row
 }
 .md\:\{flex-direction\:row\;flex-wrap\:wrap\;justify-content\:space-evenly\}{
