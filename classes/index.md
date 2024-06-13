@@ -3,6 +3,7 @@ title: Robotics Classes
 images:
   - classes.jpg
 order: 1
+form: true
 ---
 
 
