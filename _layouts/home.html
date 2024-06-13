@@ -62,16 +62,18 @@ layout: default
 
   {% when "about" %}
   <section {%if data.bg != blank %}style="background-color: {{data.bg}}" {% endif %}>
-    <div class="max-width flex row wrap">
-    <div class="flex column flex-2-1-15rem">
-      {% assign image = data.media.image   %}
-      <img src="{{ image  | prepend: '/assets/' | relative_url }}" alt="a robot laying a brick"
-      class="w-100"
+    {% assign image = data.media.image   %}
+    <div class="max-width flex column md:flex-direction:row wrap">
+    <div 
+      class="flex column flex-2-1-15rem"
+      style="background-image: url({{ image  | prepend: '/assets/' | relative_url }});background-size: cover;"
       >
     </div>
-    <div class="flex column flex-1-1-15rem p-1 m-05 text-center">
+    <div class="flex column flex-1-1-15rem p-1 m-05 text-left">
         <h2 class="flex column ">{{ data.title }}</h2>
-        <p>{{data.body}}</p>
+        {% for p in data.body %}
+        <p>{{p}}</p>
+        {% endfor %}
 
         {% if data.button.link  %}
           <a href="{{ data.button.link}}" class="link-button">{{data.button.text}}</a>
@@ -80,12 +82,6 @@ layout: default
     </div>
   </section>
 
-  {% when "contactus" %}
-  <section class="flex column p-1 m-05">
-        <h2 class="flex column text-center">{{ data.title }}</h2>
-        <a href="{{ data.button.link}}" class="link-button">{{data.button.text}}</a>
-        
-  </section>
 
   {% endcase %}
 {%- endfor -%}
