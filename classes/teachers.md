@@ -1,6 +1,7 @@
 ---
 title: Teachers
 images:
+  - teachers-01.jpg
 order: 4
 form: true
 ---
