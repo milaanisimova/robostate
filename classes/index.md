@@ -23,3 +23,4 @@ In today's rapidly evolving world, the significance of technology cannot be over
 # Links:
 - [Junior classes](junior.html)
 - [Advanced classes](advanced.html)
+- [Competitions](competitions.html)
