@@ -1,0 +1,15 @@
+bg: "#f7f5fa"
+class: flex column wrap 
+
+social:
+  - id:  facebook
+    title: Facebook
+    url: https://www.facebook.com/roboticstate
+    class: facebook icon
+    icon:
+
+  - id: instagram 
+    title: Instagram 
+    url: https://www.instagram.com/robotic_state/
+    class: instagram icon
+    icon:
