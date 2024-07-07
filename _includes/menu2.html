@@ -1,0 +1,22 @@
+<div class="modal-menu column ">
+  <ul class="top-menu list-none padding-left:0 align-items:baseline display:flex flex-direction:column md:{flex-direction:row;flex-wrap:wrap;justify-content:space-evenly}">
+    {%- assign sorted_filtered_pages = site.pages | where_exp: "item", "item.order != empty" | sort: 'order'  -%}
+
+    {%- for  my_page in sorted_filtered_pages -%}
+    {%- if my_page.title -%}
+    <li class="padding-left:8px padding-right:8px display:none md:display:block">
+      <a class="page-link text-decoration:none" href="{{ my_page.url | relative_url }}">{{ my_page.title |
+        escape }}
+      </a>
+    </li>
+    {%- endif -%}
+    {%- endfor -%}
+    <!-- cta -->
+    {% for btn in headerdata.buttons %}
+    <li class="padding-left:8px padding-right:8px">
+      <a class="page-link text-decoration:none cta-rounded" href="{{btn.link}}">{{btn.text}}</a>
+    </li>
+    {% endfor %}
+
+  </ul>
+</div>

@@ -1,8 +1,20 @@
+.align-items\:baseline{
+	align-items: baseline
+}
+.align-items\:center{
+	align-items: center
+}
 .background\:\#fcfbe9{
 	background: #fcfbe9
 }
 .display\:flex{
 	display: flex
+}
+.display\:none{
+	display: none
+}
+.display\:block{
+	display: block
 }
 .flex-direction\:column{
 	flex-direction: column
@@ -13,6 +25,9 @@
 .margin\:1rem_auto{
 	margin: 1rem auto
 }
+.margin-left\:1rem{
+	margin-left: 1rem
+}
 .max-width\:1024px{
 	max-width: 1024px
 }
@@ -22,8 +37,26 @@
 .padding-bottom\:2rem{
 	padding-bottom: 2rem
 }
+.padding-left\:0{
+	padding-left: 0
+}
+.padding-left\:8px{
+	padding-left: 8px
+}
+.padding-right\:8px{
+	padding-right: 8px
+}
+.text-decoration\:none{
+	text-decoration: none
+}
 
 @media (min-width: 768px) {
+.md\:display\:block{
+	display: block
+}
+.md\:display\:none{
+	display: none
+}
 .md\:\{flex-direction\:row\;flex-wrap\:wrap\;justify-content\:space-evenly\},
 .md\:flex-direction\:row{
 	flex-direction: row

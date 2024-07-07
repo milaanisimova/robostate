@@ -1,0 +1,16 @@
+<div class="md:display:none ">
+  <ul class="list-none padding-left:0 align-items:center display:flex flex-direction:column ">
+    {%- assign sorted_filtered_pages = site.pages | where_exp: "item", "item.order != empty" | sort: 'order'  -%}
+
+    {%- for  my_page in sorted_filtered_pages -%}
+    {%- if my_page.title -%}
+    <li class="padding-left:8px padding-right:8px ">
+      <a class="page-link text-decoration:none" href="{{ my_page.url | relative_url }}">{{ my_page.title |
+        escape }}
+      </a>
+    </li>
+    {%- endif -%}
+    {%- endfor -%}
+
+  </ul>
+</div>
